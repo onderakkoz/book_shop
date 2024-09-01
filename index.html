@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookShop</title>
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/toastr/toastr.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <h2 class="title">BookShop</h2>
+
+      <ul class="menu">
+        <li class="active">Books</li>
+        <li class="">Audio Books</li>
+        <li>Gifts</li>
+        <li>About</li>
+      </ul>
+
+      <ul class="menu-icons">
+        <li><i class="bi bi-person"></i></li>
+        <li><i class="bi bi-search"></i></li>
+        <li class="basket-icon" onclick="toggleModal()">
+          <i class="bi bi-bag"></i>
+          <span class="basket-count"></span>
+        </li>
+      </ul>
+      <button class="nav-btn">|||</button>
+    </nav>
+
+    <section class="slider">
+      <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="./assets/images/slide1.png"
+              class="d-block w-100"
+              alt="onlineschool"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./assets/images/slide2.png"
+              class="d-block w-100"
+              alt="kidbooks"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./assets/images/slide3.png"
+              class="d-block w-100"
+              alt="valentinesday"
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="store my-5">
+      <div class="filter-background">
+        <ul class="filter">
+          <!-- <li class="active">All</li>
+                <li>Novel</li>
+                <li>Science Fiction </li>
+                <li>Self Improvment</li>
+                <li>History</li>
+                <li>Finans</li>
+                <li>Children</li> -->
+        </ul>
+      </div>
+
+      <div class="row book-list">
+        <!-- <div class="col-5 offset-2">
+          <div class="row book-card my-5">
+            <div class="col-6">
+              <img
+                class="img-fluid shadow"
+                src="./assets/images/books/nutuk.jpg"
+                alt="nutuk"
+              />
+            </div>
+            <div class="col-6 d-flex flex-column justify-content-between book-right">
+              <div class="book-detail">
+                <span class="fos grayy fs-5">Mustafa Kemal Atatürk</span><br />
+                <span class="fw-bold fs-4 ">Nutuk</span><br />
+                <span class="book-icons">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <span class="text-secondary">250 reviews</span>
+                </span><br>
+              </div>
+              <div>
+                <p class="book-desc">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Pariatur, magni excepturi, quia, molestias eligendi animi
+                  obcaecati non deserunt commodi est ullam aliquid assumenda
+                  asperiores! Rerum voluptatum velit recusandae at, molestias ex
+                </p>
+            </div>
+                <div>
+                    <span class="fw-bold fs-5 mx-2">45&#8378; </span>
+                    <span class="text-secondary text-decoration-line-through"> 65&#8378;</span>
+                </div>
+                <div>
+                    <button class="btn-add">ADD TO BASKET</button>
+                </div>
+            </div>
+          </div>
+        
+
+        
+        <div class="col-5">
+            <div class="row book-card  my-5">
+                <div class="col-6">
+                  <img
+                    class="img-fluid shadow"
+                    src="./assets/images/books/nutuk.jpg"
+                    alt="nutuk"
+                  />
+                </div>
+                <div class="col-6 d-flex flex-column justify-content-between">
+                  <div class="book-detail">
+                    <span class="fos grayy fs-5">Mustafa Kemal Atatürk</span><br />
+                    <span class="fw-bold fs-4 ">Nutuk</span><br />
+                    <span class="book-icons">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <span class="text-secondary">250 reviews</span>
+                    </span><br>
+                  </div>
+                  <div>
+                    <p class="book-desc">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Pariatur, magni excepturi, quia, molestias eligendi animi
+                      obcaecati non deserunt commodi est ullam aliquid assumenda
+                      asperiores! Rerum voluptatum velit recusandae at, molestias ex
+                    </p>
+                </div>
+                    <div>
+                        <span class="fw-bold fs-5 mx-2">45&#8378; </span>
+                        <span class="text-secondary text-decoration-line-through"> 65&#8378;</span>
+                    </div>
+                    <div>
+                        <button class="btn-add">ADD TO BASKET</button>
+                    </div>
+                </div>
+            </div>
+          
+
+        </div>-->
+      </div>
+    </section>
+
+    <div class="basket-modal">
+      <div class="basket-items">
+        <i class="bi bi-x" onclick="toggleModal()"></i>
+        <h2 class="basket-title">Your Items</h2>
+
+        <ul class="basket-list">
+          <li class="basket-item my-3">
+            <!-- <img src="./assets/images/books/nutuk.jpg" width="90" height="100" alt="">
+                <div class="basket-info">
+                    <h6 class="fw-bold book-title ">Nutuk</h6>
+                    <span class="price">45&#8378</span><br><br>
+                    <span class="remove">Remove</span>
+                </div>
+                <div class="book-count">
+                    <span class="minus"> - </span>
+                    <span class="fw-bold">2</span>
+                    <span class="plus"> + </span>
+                </div> -->
+            <p>Your cart is empty :(</p>
+          </li>
+        </ul>
+        <div class="basket-total">
+          <span class="total-price"> </span>
+          <button class="btn-add">CHECKOUT</button>
+        </div>
+      </div>
+    </div>
+
+    <script
+      type="text/javascript"
+      src="assets/bootstrap/js/bootstrap.min.js"
+    ></script>
+    <script src="./assets/jquery/jquery.min.js"></script>
+    <script src="./assets/toastr/toastr.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>
